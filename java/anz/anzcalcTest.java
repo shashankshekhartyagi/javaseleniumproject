@@ -28,11 +28,11 @@ public class anzcalcTest {
 		
 		
 	}
-/*	@AfterTest
+	@AfterTest
 	public void quitDriver(){
 		
 		calc.quitdriver(); 
-	} */
+	} 
 	
 
 }
