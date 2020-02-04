@@ -119,8 +119,16 @@ System.out.println(resulttext.getText());
 TakesScreenshot takeScreenshot = (TakesScreenshot) browser;
 File screenshotAs = takeScreenshot.getScreenshotAs(OutputType.FILE);
 
-//Copy to save to the hard disk, we can give workspace path
-FileUtils.copyFile(screenshotAs, new File("D:\\Screenshot1.jpg"));
+try {
+
+	FileUtils.copyFile(screenshotAs, new File(System.getProperty("user.dir") + "\\anzCalc\\src\\main\\Screens\\screenshotone.jpg"));
+ // FileUtils.copyFile(screenshotAs, new File("D://screens.jpg"));
+  
+}
+catch (IOException e) {
+	System.out.println("e::::::::::"+e);
+}
+
 
 
 if (resulttext.getText().equals("$470,000"))
